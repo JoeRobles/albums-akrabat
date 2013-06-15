@@ -11,7 +11,7 @@ class Application_Model_DbTable_Albums extends Zend_Db_Table_Abstract {
      * @return array
      * @throws Exception
      */
-    public function getAlbum(integer $id)
+    public function getAlbum($id)
     {
         $id = (int) $id;
         $row = $this->fetchRow('id = ' . $id);
@@ -28,7 +28,7 @@ class Application_Model_DbTable_Albums extends Zend_Db_Table_Abstract {
      * @param string $artist
      * @param string $title
      */
-    public function addAlbum(string $artist, string $title)
+    public function addAlbum($artist, $title)
     {
         $data = array(
             'artist' => $artist,
@@ -45,7 +45,7 @@ class Application_Model_DbTable_Albums extends Zend_Db_Table_Abstract {
      * @param string $artist
      * @param string $title
      */
-    public function updateAlbum(integer $id, string $artist, string $title)
+    public function updateAlbum($id, $artist, $title)
     {
         $data = array(
             'artist' => $artist,
@@ -60,7 +60,7 @@ class Application_Model_DbTable_Albums extends Zend_Db_Table_Abstract {
      * 
      * @param integer $id
      */
-    public function deleteAlbum(integer $id)
+    public function deleteAlbum($id)
     {
         $this->delete('id =' . (int) $id);
     }
