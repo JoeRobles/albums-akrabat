@@ -67,7 +67,7 @@ class IndexController extends Zend_Controller_Action
         }
     }
 
-    public function delelteAction()
+    public function deleteAction()
     {
         if ($this->getRequest()->isPost()) {
             $del = $this->getRequest()->getPost('del');
