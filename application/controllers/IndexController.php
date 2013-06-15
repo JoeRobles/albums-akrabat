@@ -85,4 +85,12 @@ class IndexController extends Zend_Controller_Action
             $this->view->album = $albums->getAlbum($id);
         }
     }
+    
+    public function showAction()
+    {
+        $id = $this->_getParam('id', 0);
+        
+        $albums = new Application_Model_DbTable_Albums();
+        $this->view->album = $albums->getAlbum($id);
+    }
 }

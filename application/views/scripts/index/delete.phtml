@@ -13,3 +13,8 @@ $this->headTitle($this->title);
         <input type="submit" name="del" value="No" />
     </div>
 </form>
+
+<a href="<?php echo $this->url(array(
+                    'controller' => 'Index',
+                    'action' => 'index',
+                ));?>">Back to list</a>

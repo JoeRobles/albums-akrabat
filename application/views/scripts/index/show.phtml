@@ -1,9 +1,10 @@
 <?php
-$this->title = "Add new album";
+$this->title = "Show album details";
 $this->headTitle($this->title);
-
-echo $this->form ;
 ?>
+<p>Artist: <?php echo $this->escape($this->album['artist']); ?></p>
+<p>Title: <?php echo $this->escape($this->album['title']); ?></p>
+
 <a href="<?php echo $this->url(array(
                     'controller' => 'Index',
                     'action' => 'index',
