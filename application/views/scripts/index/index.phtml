@@ -4,7 +4,7 @@ $this->headTitle($this->title);
 ?>
 <p>
     <a href="<?php echo $this->url(array(
-            'controller' => 'index',
+            'controller' => 'Index',
             'action' => 'add',
         ));?>">Add new album</a>
 </p>
@@ -21,7 +21,7 @@ foreach ($this->albums as $album) {
 ?>
     <tr>
         <td><a href="<?php echo $this->url(array(
-                    'controller' => 'index',
+                    'controller' => 'Index',
                     'action' => 'show',
                     'id' => $album->id,
                 ));?>"><?php echo $n; ?></a></td>
@@ -29,12 +29,12 @@ foreach ($this->albums as $album) {
         <td><?php echo $this->escape($album->title); ?></td>
         <td>
             <a href="<?php echo $this->url(array(
-                    'controller' => 'index',
+                    'controller' => 'Index',
                     'action' => 'edit',
                     'id' => $album->id,
                 ));?>">Edit</a>
             <a href="<?php echo $this->url(array(
-                    'controller' => 'index',
+                    'controller' => 'Index',
                     'action' => 'delete',
                     'id' => $album->id,
                 ));?>">Delete</a>
