@@ -1,1 +1,19 @@
-<?php echo $this->layout()->content; ?>
+<?php
+$this->headTitle()->setSeparator(' - ');
+$this->headTitle('Zend Framework Tutorial');
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php echo $this->headTitle(); ?>
+    </head>
+    
+    <body>
+        <div id="content">
+            <h1><?php echo $this->escape($this->title); ?></h1>
+            <?php echo $this->layout()->content; ?>
+        </div>
+    </body>
+</html>
