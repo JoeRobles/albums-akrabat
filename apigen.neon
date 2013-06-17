@@ -1,0 +1,16 @@
+source: src/
+destination: docs/
+extensions: [ php, js ]
+charset: utf-8
+main: Zendcha
+
+title: "Zendcha - ZendFramework plus Sencha Ext JS"
+baseUrl: local.docs.zendcha.com
+
+accessLevels: [ public, protected, private ]
+internal: Yes
+deprecated: Yes
+todo: Yes
+download: Yes
+
+colors: Yes
