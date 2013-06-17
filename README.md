@@ -1,4 +1,4 @@
-zendcha
-=======
+Albums Akrabat
+==============
 
-Zend Framework 1 plus Sencha Ext JS
+Albums CRUD on Zend Framework 1
