@@ -1,4 +1,4 @@
-source: src/
+source: application/
 destination: docs/
 extensions: [ php, js ]
 charset: utf-8

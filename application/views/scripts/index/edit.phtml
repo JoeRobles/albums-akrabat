@@ -1,10 +1,11 @@
 <?php
 $this->title = "Edit album";
 $this->headTitle($this->title);
-
 echo $this->form;
 ?>
+<p>
 <a href="<?php echo $this->url(array(
                     'controller' => 'Index',
                     'action' => 'index',
                 ));?>">Back to list</a>
+</p>

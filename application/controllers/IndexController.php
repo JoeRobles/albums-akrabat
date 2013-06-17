@@ -2,18 +2,18 @@
 
 class IndexController extends Zend_Controller_Action
 {
-
-    public function init()
-    {
-        /* Initialize action controller here */
-    }
-
+    /**
+     * Display all albums
+     */
     public function indexAction()
     {
         $albums = new Application_Model_DbTable_Albums();
         $this->view->albums = $albums->fetchAll();
     }
 
+    /**
+     * Displays a form to add a album
+     */
     public function addAction()
     {
         $form = new Application_Form_Album();
@@ -37,6 +37,9 @@ class IndexController extends Zend_Controller_Action
         }
     }
 
+    /**
+     * Displays a form to edit a album
+     */
     public function editAction()
     {
         $form = new Application_Form_Album();
@@ -67,6 +70,9 @@ class IndexController extends Zend_Controller_Action
         }
     }
 
+    /**
+     * Displays a form to delete a form
+     */
     public function deleteAction()
     {
         if ($this->getRequest()->isPost()) {
@@ -86,6 +92,9 @@ class IndexController extends Zend_Controller_Action
         }
     }
     
+    /**
+     * Shows a album details
+     */
     public function showAction()
     {
         $id = $this->_getParam('id', 0);

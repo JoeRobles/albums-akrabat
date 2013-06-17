@@ -38,3 +38,7 @@ form #submitbutton
 {
     margin-left: 100px;
 }
+form#album
+{
+    height: 84px;
+}
