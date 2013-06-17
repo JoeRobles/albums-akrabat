@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta name="robots" content="noindex" />
+
+	<title>File forms/Album.php | Zendcha - ZendFramework plus Sencha Ext JS</title>
+
+	<script type="text/javascript" src="resources/combined.js?832240779"></script>
+	<script type="text/javascript" src="elementlist.js?276306963"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Application_Form_Album.html">Application_Form_Album</a></li>
+				<li><a href="class-Application_Model_DbTable_Albums.html">Application_Model_DbTable_Albums</a></li>
+				<li><a href="class-Bootstrap.html">Bootstrap</a></li>
+				<li><a href="class-ErrorController.html">ErrorController</a></li>
+				<li><a href="class-IndexController.html">IndexController</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-None.html" title="Summary of None"><span>Namespace</span></a>
+			</li>
+			<li>
+				<a href="class-Application_Form_Album.html" title="Summary of Application_Form_Album"><span>Class</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="zendcha-zendframework-plus-sencha-ext-js-api-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
+			</li>
+		</ul>
+	</div>
+
+<pre><code><span id="1" class="l"><a class="l" href="#1"> 1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="#2"> 2: </a>
+</span><span id="3" class="l"><a class="l" href="#3"> 3: </a><span class="php-keyword1">class</span> <a id="Application_Form_Album" href="#Application_Form_Album">Application_Form_Album</a> <span class="php-keyword1">extends</span> Zend_Form {
+</span><span id="4" class="l"><a class="l" href="#4"> 4: </a>
+</span><span id="5" class="l"><a class="l" href="#5"> 5: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_init" href="#_init">init</a>() {
+</span><span id="6" class="l"><a class="l" href="#6"> 6: </a>        <span class="php-var">$this</span>-&gt;setName(<span class="php-quote">'album'</span>);
+</span><span id="7" class="l"><a class="l" href="#7"> 7: </a>        
+</span><span id="8" class="l"><a class="l" href="#8"> 8: </a>        <span class="php-var">$id</span> = <span class="php-keyword1">new</span> Zend_Form_Element_Hidden(<span class="php-quote">'id'</span>);
+</span><span id="9" class="l"><a class="l" href="#9"> 9: </a>        <span class="php-var">$id</span>-&gt;addFilter(<span class="php-quote">'Int'</span>);
+</span><span id="10" class="l"><a class="l" href="#10">10: </a>        
+</span><span id="11" class="l"><a class="l" href="#11">11: </a>        <span class="php-var">$artist</span> = <span class="php-keyword1">new</span> Zend_Form_Element_Text(<span class="php-quote">'artist'</span>);
+</span><span id="12" class="l"><a class="l" href="#12">12: </a>        <span class="php-var">$artist</span>-&gt;setLabel(<span class="php-quote">'Artist'</span>)
+</span><span id="13" class="l"><a class="l" href="#13">13: </a>                -&gt;setRequired(<span class="php-keyword1">true</span>)
+</span><span id="14" class="l"><a class="l" href="#14">14: </a>                -&gt;addFilter(<span class="php-quote">'StripTags'</span>)
+</span><span id="15" class="l"><a class="l" href="#15">15: </a>                -&gt;addFilter(<span class="php-quote">'StringTrim'</span>)
+</span><span id="16" class="l"><a class="l" href="#16">16: </a>                -&gt;addValidator(<span class="php-quote">'NotEmpty'</span>);
+</span><span id="17" class="l"><a class="l" href="#17">17: </a>        
+</span><span id="18" class="l"><a class="l" href="#18">18: </a>        <span class="php-var">$title</span> = <span class="php-keyword1">new</span> Zend_Form_Element_Text(<span class="php-quote">'title'</span>);
+</span><span id="19" class="l"><a class="l" href="#19">19: </a>        <span class="php-var">$title</span>-&gt;setLabel(<span class="php-quote">'Title'</span>)
+</span><span id="20" class="l"><a class="l" href="#20">20: </a>                -&gt;setRequired(<span class="php-keyword1">true</span>)
+</span><span id="21" class="l"><a class="l" href="#21">21: </a>                -&gt;addFilter(<span class="php-quote">'StripTags'</span>)
+</span><span id="22" class="l"><a class="l" href="#22">22: </a>                -&gt;addFilter(<span class="php-quote">'StringTrim'</span>)
+</span><span id="23" class="l"><a class="l" href="#23">23: </a>                -&gt;addValidator(<span class="php-quote">'NotEmpty'</span>);
+</span><span id="24" class="l"><a class="l" href="#24">24: </a>        
+</span><span id="25" class="l"><a class="l" href="#25">25: </a>        <span class="php-var">$submit</span> = <span class="php-keyword1">new</span> Zend_Form_Element_Submit(<span class="php-quote">'submit'</span>);
+</span><span id="26" class="l"><a class="l" href="#26">26: </a>        <span class="php-var">$submit</span>-&gt;setAttrib(<span class="php-quote">'id'</span>, <span class="php-quote">'submitbutton'</span>);
+</span><span id="27" class="l"><a class="l" href="#27">27: </a>        
+</span><span id="28" class="l"><a class="l" href="#28">28: </a>        <span class="php-var">$this</span>-&gt;addElements(<span class="php-keyword1">array</span>(<span class="php-var">$id</span>, <span class="php-var">$artist</span>, <span class="php-var">$title</span>, <span class="php-var">$submit</span>));
+</span><span id="29" class="l"><a class="l" href="#29">29: </a>    }
+</span><span id="30" class="l"><a class="l" href="#30">30: </a></span>}</code></pre>
+
+	<div id="footer">
+		Zendcha - ZendFramework plus Sencha Ext JS API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
