@@ -10,8 +10,8 @@ resources.frontController.params.displayExceptions = 0
 
 resources.db.adapter = PDO_MYSQL
 resources.db.params.host = localhost
-resources.db.params.username = root
-resources.db.params.password = 
+resources.db.params.username = rob
+resources.db.params.password = 123456
 resources.db.params.dbname = zf-tutorial
 
 [staging : production]
